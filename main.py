@@ -1,10 +1,16 @@
 import sys
+from encrypt import encrypt
+from decrypt import decrypt
 
 def main():
     input = get_user_input()
 
     if input == 5:
         sys.exit("Program exited")
+    elif input == 1:
+        print(encrypt())
+    elif input == 2:
+        decrypt()
 
 
 def greetings():
@@ -18,7 +24,7 @@ def greetings():
 5. Exit
 """)
     
-    
+
 def get_user_input():
     while True:
         try:
@@ -31,10 +37,9 @@ def get_user_input():
                 return user_input
         except ValueError:
             continue
+        except KeyboardInterrupt:
+            sys.exit("Program interupted with Keyboard")
 
-
-def encrypt():
-    pass
 
 
 if __name__ == "__main__":
