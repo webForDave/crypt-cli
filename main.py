@@ -26,19 +26,19 @@ def greetings():
     
 
 def get_user_input():
-    while True:
-        try:
-            greetings()
-            user_input = int(input("> ").strip())
-            
-            if user_input < 0 or user_input > 5:
-                raise ValueError
-            else:
-                return user_input
-        except ValueError:
-            continue
-        except KeyboardInterrupt:
-            sys.exit("Program interupted with Keyboard")
+ 
+    try:
+        greetings()
+        user_input = int(input("> ").strip())
+        
+        if user_input < 0 or user_input > 5:
+            raise ValueError
+        else:
+            return user_input
+    except ValueError:
+        sys.exit("\nPlease select an option from the menu\n")
+    except KeyboardInterrupt:
+        sys.exit("\nProgram interupted with Keyboard\n")
 
 
 
