@@ -58,30 +58,4 @@ def message_and_key():
 
 def encrypt():
     user = message_and_key()
-    new_list = []
-    mmm = []
-
-    if "Invalid" in user:
-        return "\nEncryption process failed"
-    else:
-        text = user[0]
-        key = user[1]
-
-        for i in text:
-            if i == " ":
-                new_list.append(" ")         
-            elif i.lower() in alphabet:
-                index_of_element = alphabet.index(i)
-                new_list.append(index_of_element + key) 
-            else:
-                new_list.append(index_of_element)
-
-        for j in new_list:
-            if j == " ":
-                mmm.append(" ")
-            else:
-                mmm.append(alphabet[j])
-
-        return "".join(mmm)
-
     
