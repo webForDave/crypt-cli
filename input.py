@@ -47,7 +47,7 @@ def get_user_message():
                 continue
         except ValueError:
             print("\nMessage cannot contain a number\n") 
-            get_another_text = input("Do you want to input another text? ").strip().lower()
+            get_another_text = input("Do you want to input another text? Y/N ").strip().lower()
             if get_another_text in ["yes", "y"]:
                 continue
             elif get_another_text in ["no", 'n']:
