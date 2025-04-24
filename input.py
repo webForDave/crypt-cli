@@ -39,22 +39,22 @@ def get_user_message():
             user_message = input("> ").strip()
 
             if user_message:
-                if any(char.isdigit() for char in user_message):
-                    raise ValueError
-                return user_message
+                # if any(char.isdigit() for char in user_message):
+                #     raise ValueError
+                return user_message.lower()
             else:
                 print("\nYou need to input a message\n")
                 continue
-        except ValueError:
-            print("\nMessage cannot contain a number\n") 
-            get_another_text = input("Do you want to input another text? Y/N ").strip().lower()
-            if get_another_text in ["yes", "y"]:
-                continue
-            elif get_another_text in ["no", 'n']:
-                print("Program successfully aborted")
-                break
-            else:
-                break
+        # except ValueError:
+        #     print("\nMessage cannot contain a number\n") 
+        #     get_another_text = input("Do you want to input another text? Y/N ").strip().lower()
+        #     if get_another_text in ["yes", "y"]:
+        #         continue
+        #     elif get_another_text in ["no", 'n']:
+        #         print("Program successfully aborted")
+        #         break
+        #     else:
+        #         break
         except KeyboardInterrupt:
             sys.exit(exit_string)
 
