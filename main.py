@@ -5,12 +5,12 @@ from decrypt import decrypt
 def main():
     input = get_user_input()
 
-    if input == 5:
+    if input == 3:
         sys.exit("Program exited")
     elif input == 1:
         print(encrypt())
     elif input == 2:
-        decrypt()
+        print(decrypt())
 
 
 def greetings():
@@ -19,9 +19,7 @@ def greetings():
 """What would you like to do? 
 1. Encrypt a message
 2. Decrypt a message
-3. Load from file
-4. Save to file
-5. Exit
+3. Exit
 """)
     
 
