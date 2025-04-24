@@ -20,6 +20,6 @@ def encrypt():
         if type(char) == str:
             new_string.append(char)
         else:
-            new_string.append(alphabet[char])
+            new_string.append(alphabet[char%len(alphabet)])
 
-    return "".join(new_string)
+    return f"Here's your encrypted message:\n{''.join(new_string)}"
